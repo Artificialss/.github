@@ -24,6 +24,14 @@ We build for the people and places frontier technology usually skips.
 - **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
 - **Education**: AI literacy, context engineering and production agentic workflows.
 
+### Showcase
+Open-source reference projects, one per platform:
+- **Rust:** [CryptoAlly-API](https://github.com/Artificialss/CryptoAlly-API), a production Rust API with clean architecture
+- **Web:** [Showcase.NextJS](https://github.com/Artificialss/Showcase.NextJS), Next.js and TypeScript
+- **Android:** [Showcase.Android](https://github.com/Artificialss/Showcase.Android), Kotlin and Jetpack Compose
+- **iOS:** [Showcase.iOS](https://github.com/Artificialss/Showcase.iOS), Swift and SwiftUI
+- **Multiplatform:** [Showcase.CMM](https://github.com/Artificialss/Showcase.CMM), Compose Multiplatform
+
 ## How we build
 
 We ship production software with AI-assisted engineering under a strict architecture spec, then hold the result to the same standard as any hand-written codebase: real patterns, live APIs, no placeholders and no shortcuts.
@@ -65,7 +73,7 @@ Each migration comes with the architecture documentation, so your team owns the 
 Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with MVVM, `StateFlow`, Koin dependency injection, type-safe Navigation and Room for local data. Where a platform deserves it we go native: Swift and SwiftUI on iOS, Jetpack Compose on Android. Our showcase apps demonstrate the same patterns on each platform.
 
 ### Frontend
-Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We are also building **Dioxus** frontends in Rust, sharing typed request and response models with the API.
+Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We also build **Dioxus** frontends in Rust that compile to **WebAssembly**, sharing typed request and response models with the API, on top of solid semantic HTML and CSS.
 
 ### Backend
 Rust services built in layers that depend inward only, as in our production CryptoAlly API:
