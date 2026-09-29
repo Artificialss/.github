@@ -20,7 +20,7 @@ We build for the people and places frontier technology usually skips.
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
 - **Data engineering**: turning scattered, undocumented public sources into clean, structured, continuously verified datasets.
-- **Linguistic audit**: turnkey workflows to migrate organizational documentation to new style and compliance standards (APA, ISO, inclusive language). In development.
+- **Documentation audit and migration (linguistic audit)**: turnkey workflows that audit organizational documentation and migrate it to new style and compliance standards (APA, ISO, inclusive language), including institutional manuals and MCP integration. Available now.
 - **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
 - **Education**: AI literacy, context engineering and production agentic workflows.
 
@@ -28,8 +28,38 @@ We build for the people and places frontier technology usually skips.
 
 We ship production software with AI-assisted engineering under a strict architecture spec, then hold the result to the same standard as any hand-written codebase: real patterns, live APIs, no placeholders and no shortcuts.
 
+**Spec first.** Every project starts with a written architecture spec: the layers, the dependency rules, the patterns (MVVM, dependency injection, ports and adapters), the data sources and the acceptance criteria. AI agents build inside that spec, so the design decisions are made by people up front instead of being improvised line by line.
+
+**Real, end to end.** Our showcase apps were built end to end with Claude Code under exactly this kind of spec: real navigation, real state management, real local storage and live APIs. If a feature is on screen, it works. We do not ship mocked data, stubbed screens or TODO placeholders as if they were finished.
+
+**Held to the hand-written standard.** Generated code goes through the same gates as any other: typed boundaries, formatting and linting, automated tests, security review, and a pull request that a person reads and approves. Speed comes from the tooling; accountability stays with the engineers.
+
+**Designed to be handed off.** Clients get source code, architecture documentation, dependency lists, usage guides and migrations, so a team can take over without us. Documentation is audited as carefully as code: style and compliance standards (APA, ISO, inclusive language) are applied and verified, and existing documentation can be migrated to them with our audit workflows.
+
+**Built to evolve.** Layers depend inward only, so databases, providers and UI frameworks can change without rewriting the business rules. Data ships with its methodology, coverage audits and known gaps documented, and schemas change only through versioned migrations.
+
 ### Architecture
-Clean and hexagonal architecture across every stack. Domain logic sits at the center with no I/O; use cases and ports define what the system needs; adapters (databases, HTTP, UI) plug in at the edges. Dependencies point inward only, so a database, a provider or a UI framework can change without touching the business rules.
+There is no single right architecture, so we work with the one that fits the client, the team and the stage of the product. We build and maintain projects in any of these, and we adapt to a client's existing conventions and requirements instead of imposing our own:
+
+| Pattern | What it is | Where it fits |
+|---|---|---|
+| **MVC** (Model-View-Controller) | The controller mediates between the model and the view | Server-rendered web apps and classic frameworks |
+| **MVP** (Model-View-Presenter) | A presenter holds the UI logic and the view stays passive | Android and iOS apps that need highly testable screens |
+| **MVVM** (Model-View-ViewModel) | Observable state (`StateFlow`, Observable) bound to the view | Compose, SwiftUI and reactive UIs |
+| **MVI** (Model-View-Intent) | Unidirectional data flow: user intents in, immutable state out | Complex screens where predictable state matters |
+| **Clean architecture** | Concentric layers (domain, use cases, data) with dependencies pointing inward | Products that will grow and outlive their frameworks |
+| **Hexagonal** (ports and adapters) | The core defines ports; databases, HTTP and UIs plug in as adapters | Backends and integrations, our default for Rust services |
+
+The principle underneath is the same in all of them: business rules do not depend on frameworks. Domain logic sits at the center with no I/O, use cases and ports define what the system needs, and adapters (databases, providers, UI) plug in at the edges with dependencies pointing inward only. A database, a provider or a UI framework can then change without touching the business rules.
+
+**Architecture migrations.** Many projects begin as a prototype or a minimum viable product built for speed, and then hit the limits of that shortcut. We take these projects to a professional footing without a rewrite from zero: we audit the current structure, agree the target architecture, and migrate in safe increments while the product keeps shipping. Typical moves:
+- From an MVP (Minimum Viable Product), the first version built for speed, to a layered, tested, production-grade codebase.
+- From MVC (Model-View-Controller) or MVP (Model-View-Presenter) to MVVM (Model-View-ViewModel) or MVI (Model-View-Intent), with predictable state and testable screens.
+- From a monolith or a tightly coupled backend to clean or hexagonal architecture, with ports around the database and the third-party services.
+- From ad hoc data access to versioned schema migrations and typed API boundaries.
+- Adding dependency injection, automated tests and CI around code that already works, so it becomes safe to change.
+
+Each migration comes with the architecture documentation, so your team owns the result.
 
 ### Mobile
 Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with MVVM, `StateFlow`, Koin dependency injection, type-safe Navigation and Room for local data. Where a platform deserves it we go native: Swift and SwiftUI on iOS, Jetpack Compose on Android. Our showcase apps demonstrate the same patterns on each platform.
@@ -94,7 +124,7 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 
 ### Engagement models
 
-**Software development.** AI-powered software development, designed to be handed off: product design, prototyping, MVPs, modernization and data engineering. Full-stack across web, mobile and AI integration, with the same team and workflow for every client. Final rates are tailored to project scope and engagement length; contact us for a proposal.
+**Software development.** AI-powered software development, designed to be handed off: product design, prototyping, MVPs (Minimum Viable Products), modernization and data engineering. Full-stack across web, mobile and AI integration, with the same team and workflow for every client. Final rates are tailored to project scope and engagement length; contact us for a proposal.
 
 | | Costa Rica | International (U.S. priority) |
 |---|---|---|
@@ -106,7 +136,14 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 
 **In-person and worldwide.** Our team works on site with clients anywhere in the world, for build sprints, workshops, architecture reviews and team onboarding. For international in-person engagements, we ask the client to cover the flights; other travel details are agreed in the proposal. Remote engagements need no travel.
 
-**Vibe Sessions.** Hands-on working sessions in three tracks: *Vibe Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Vibe UI Design* (Figma AI prototypes and design systems) and *Vibe Product Design* (architecture and platform strategy). Book privately for a 1:1 Vibe Sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
+**Agentic AI Quick Sessions.** Short, focused working sessions where you go from idea to a real deliverable with AI agents, guided live by our engineers. Three tracks: *Agentic Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Agentic UI Design* (Figma AI prototypes and design systems) and *Agentic Product Design* (architecture and platform strategy). Book privately for a 1:1 sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
+
+*Why this is a professional session, not casual prompting.* Anyone can ask an AI tool for code and hope it works. A quick session is different because it is run the way we run our own projects:
+- **Guided by professionals.** A senior engineer or designer leads the session. They frame the problem, choose the architecture, make the design decisions and know when the agent is wrong, so the result is not whatever the first prompt produced.
+- **Agents working inside a spec.** Before building, we write down the structure, the patterns and the acceptance criteria. Agents then work within that spec, which keeps the output consistent, reviewable and maintainable.
+- **Human in the loop at every step.** Each change is reviewed as it lands. You see how decisions are made and learn the workflow, not only the output.
+- **Production standards.** Typed boundaries, formatting and linting, tests where they matter, and real APIs instead of placeholders. The deliverable is something you can keep building on, not a throwaway demo.
+- **A clean handoff.** The session summary explains what was built and why, and the source, design files or product spec arrive within 24 hours, so your team can continue without us.
 
 **Legal advisory.** Direct introductions to independent, licensed Costa Rican attorneys, supported by AI-assisted guides, for residency, real estate, corporate formation, family and labor matters. Available in English and Spanish, for local and international clients. We connect you with counsel; we do not provide legal representation ourselves.
 - Legal info request: free, with a written response and no call required
