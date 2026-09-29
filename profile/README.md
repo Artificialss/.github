@@ -24,6 +24,17 @@ We build for the people and places frontier technology usually skips.
 - **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
 - **Education**: AI literacy, context engineering and production agentic workflows.
 
+### Showcase repositories
+Open-source reference projects that show how we build on each platform, with real patterns and live data and no placeholders. More in our [portfolio](https://artificialss.ai/portfolio).
+
+| Platform | Repository | What it demonstrates |
+|---|---|---|
+| **Rust** | [CryptoAlly-API](https://github.com/Artificialss/CryptoAlly-API) | A production Rust API with clean architecture, serving historical price and catalog data for crypto, US stocks and ETFs, commodities and international markets. axum on Vercel's Rust runtime with Neon Postgres, sqlx with parameterized queries, newtypes, API-key authentication with hashed keys, and end-to-end tests against in-memory fakes. Live at [cryptoally.dev](https://www.cryptoally.dev/). |
+| **Web** | [Showcase.NextJS](https://github.com/Artificialss/Showcase.NextJS) | A standalone Next.js 16 and TypeScript landing page with the App Router, server and client component boundaries, next-themes dark mode, font optimization and hand-built UI primitives with no bloated dependencies. |
+| **Android** | [Showcase.Android](https://github.com/Artificialss/Showcase.Android) | A native Android app in Kotlin and Jetpack Compose with MVVM and clean architecture, Koin dependency injection and type-safe Navigation Compose routes. |
+| **iOS** | [Showcase.iOS](https://github.com/Artificialss/Showcase.iOS) | A native iOS app in Swift and SwiftUI with MVVM, clean architecture and the modern Observable state pattern. |
+| **Multiplatform** | [Showcase.CMM](https://github.com/Artificialss/Showcase.CMM) | A Compose Multiplatform app built end to end with Claude Code under a strict architecture spec (MVP (Model-View-Presenter), Koin, Room and live APIs). |
+
 ## How we build
 
 We ship production software with AI-assisted engineering under a strict architecture spec, then hold the result to the same standard as any hand-written codebase: real patterns, live APIs, no placeholders and no shortcuts.
@@ -65,7 +76,7 @@ Each migration comes with the architecture documentation, so your team owns the 
 Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with MVVM, `StateFlow`, Koin dependency injection, type-safe Navigation and Room for local data. Where a platform deserves it we go native: Swift and SwiftUI on iOS, Jetpack Compose on Android. Our showcase apps demonstrate the same patterns on each platform.
 
 ### Frontend
-Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We are also building **Dioxus** frontends in Rust, sharing typed request and response models with the API.
+Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We also build **Dioxus** frontends in Rust that compile to **WebAssembly**, sharing typed request and response models with the API, on top of solid semantic HTML and CSS.
 
 ### Backend
 Rust services built in layers that depend inward only, as in our production CryptoAlly API:
