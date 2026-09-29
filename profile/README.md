@@ -70,5 +70,37 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 - Documentation lives with the code: architecture, dependencies and usage for every repository.
 - Ethics is part of the definition of done: technical merit, measurable social benefit and a transparent ecological footprint.
 
+## Working with us
+
+### Engagement models
+
+**Software development.** AI-powered software development, designed to be handed off: product design, prototyping, MVPs, modernization and data engineering. Full-stack across web, mobile and AI integration, with the same team and workflow for every client. Final rates are tailored to project scope and engagement length; contact us for a proposal.
+
+| | Costa Rica | International (U.S. priority) |
+|---|---|---|
+| **Structure** | Flat monthly rate: predictable, no hidden fees | Direct 1099 contractor relationship with clean tax documentation |
+| **Scope** | Full-stack development: web, mobile and AI integration | Senior, AI-powered engineering output, led from the U.S. |
+| **Compliance** | SICOP vendor registration for public-sector projects | 1099-NEC issued at year end; no W-8BEN forms |
+| **Cost** | Tailored per project | 35-50% savings vs. California and Delaware senior engineer salaries |
+
+**Vibe Sessions.** Hands-on working sessions in three tracks: *Vibe Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Vibe UI Design* (Figma AI prototypes and design systems) and *Vibe Product Design* (architecture and platform strategy). Book privately for a 1:1 Vibe Sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
+
+**Legal advisory.** Direct introductions to independent, licensed Costa Rican attorneys, supported by AI-assisted guides, for residency, real estate, corporate formation, family and labor matters. Available in English and Spanish, for local and international clients. We connect you with counsel; we do not provide legal representation ourselves.
+- Legal info request: free, with a written response and no call required
+- Quick consultation: $20 for 30 minutes
+- Full advisory hour: $40 for 1 hour
+
+**Academy.** Structured programs in Spanish (English on request) for educators and students, inclusive language, and professional and technical teams: context engineering, agentic coding and agentic workflow design. Two-hour workshops and a four-week intensive, in person in San Jose or online. Groups of 10 or more receive a discount and priority scheduling. Built for Costa Rica and Latin America.
+
 ## Contact
-[artificialss.ai](https://artificialss.ai/) · info@artificialss.ai · Turrialba, Costa Rica
+
+| | |
+|---|---|
+| **Website** | [artificialss.ai](https://artificialss.ai/) |
+| **Start a project or book a session** | [artificialss.ai/contact](https://artificialss.ai/contact) |
+| **Email** | [info@artificialss.ai](mailto:info@artificialss.ai) |
+| **LinkedIn** | [linkedin.com/company/artificialss](https://www.linkedin.com/company/artificialss/) |
+| **GitHub** | [github.com/Artificialss](https://github.com/Artificialss) |
+| **X** | [@ArtificialssAI](https://x.com/ArtificialssAI) |
+| **YouTube** | [@Artificialss](https://www.youtube.com/@Artificialss) |
+| **Headquarters** | Turrialba, Costa Rica |
