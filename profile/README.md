@@ -102,6 +102,9 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 | **Scope** | Full-stack development: web, mobile and AI integration | Senior, AI-powered engineering output, led from the U.S. |
 | **Compliance** | SICOP vendor registration for public-sector projects | 1099-NEC issued at year end; no W-8BEN forms |
 | **Cost** | Tailored per project | 35-50% savings vs. California and Delaware senior engineer salaries |
+| **On-site work** | In person across Costa Rica | In person worldwide; the client covers the flights |
+
+**In-person and worldwide.** Our team works on site with clients anywhere in the world, for build sprints, workshops, architecture reviews and team onboarding. For international in-person engagements, we ask the client to cover the flights; other travel details are agreed in the proposal. Remote engagements need no travel.
 
 **Vibe Sessions.** Hands-on working sessions in three tracks: *Vibe Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Vibe UI Design* (Figma AI prototypes and design systems) and *Vibe Product Design* (architecture and platform strategy). Book privately for a 1:1 Vibe Sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
 
