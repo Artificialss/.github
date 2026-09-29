@@ -89,8 +89,9 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 - Legal info request: free, with a written response and no call required
 - Quick consultation: $20 for 30 minutes
 - Full advisory hour: $40 for 1 hour
+- Contact: [legal@artificialss.ai](mailto:legal@artificialss.ai)
 
-**Academy.** Structured programs in Spanish (English on request) for educators and students, inclusive language, and professional and technical teams: context engineering, agentic coding and agentic workflow design. Two-hour workshops and a four-week intensive, in person in San Jose or online. Groups of 10 or more receive a discount and priority scheduling. Built for Costa Rica and Latin America.
+**Academy.** Structured programs in Spanish (English on request) for educators and students, inclusive language, and professional and technical teams: context engineering, agentic coding and agentic workflow design. Two-hour workshops and a four-week intensive, in person in San Jose or online. Groups of 10 or more receive a discount and priority scheduling. Built for Costa Rica and Latin America. Contact: [academy@artificialss.ai](mailto:academy@artificialss.ai)
 
 ## Contact
 
@@ -98,7 +99,9 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 |---|---|
 | **Website** | [artificialss.ai](https://artificialss.ai/) |
 | **Start a project or book a session** | [artificialss.ai/contact](https://artificialss.ai/contact) |
-| **Email** | [info@artificialss.ai](mailto:info@artificialss.ai) |
+| **General** | [info@artificialss.ai](mailto:info@artificialss.ai) |
+| **Legal advisory** | [legal@artificialss.ai](mailto:legal@artificialss.ai) |
+| **Academy** | [academy@artificialss.ai](mailto:academy@artificialss.ai) |
 | **LinkedIn** | [linkedin.com/company/artificialss](https://www.linkedin.com/company/artificialss/) |
 | **GitHub** | [github.com/Artificialss](https://github.com/Artificialss) |
 | **X** | [@ArtificialssAI](https://x.com/ArtificialssAI) |
