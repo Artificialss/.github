@@ -39,7 +39,27 @@ We ship production software with AI-assisted engineering under a strict architec
 **Built to evolve.** Layers depend inward only, so databases, providers and UI frameworks can change without rewriting the business rules. Data ships with its methodology, coverage audits and known gaps documented, and schemas change only through versioned migrations.
 
 ### Architecture
-Clean and hexagonal architecture across every stack. Domain logic sits at the center with no I/O; use cases and ports define what the system needs; adapters (databases, HTTP, UI) plug in at the edges. Dependencies point inward only, so a database, a provider or a UI framework can change without touching the business rules.
+There is no single right architecture, so we work with the one that fits the client, the team and the stage of the product. We build and maintain projects in any of these, and we adapt to a client's existing conventions and requirements instead of imposing our own:
+
+| Pattern | What it is | Where it fits |
+|---|---|---|
+| **MVC** (Model-View-Controller) | The controller mediates between the model and the view | Server-rendered web apps and classic frameworks |
+| **MVP** (Model-View-Presenter) | A presenter holds the UI logic and the view stays passive | Android and iOS apps that need highly testable screens |
+| **MVVM** (Model-View-ViewModel) | Observable state (`StateFlow`, Observable) bound to the view | Compose, SwiftUI and reactive UIs |
+| **MVI** (Model-View-Intent) | Unidirectional data flow: user intents in, immutable state out | Complex screens where predictable state matters |
+| **Clean architecture** | Concentric layers (domain, use cases, data) with dependencies pointing inward | Products that will grow and outlive their frameworks |
+| **Hexagonal** (ports and adapters) | The core defines ports; databases, HTTP and UIs plug in as adapters | Backends and integrations, our default for Rust services |
+
+The principle underneath is the same in all of them: business rules do not depend on frameworks. Domain logic sits at the center with no I/O, use cases and ports define what the system needs, and adapters (databases, providers, UI) plug in at the edges with dependencies pointing inward only. A database, a provider or a UI framework can then change without touching the business rules.
+
+**Architecture migrations.** Many projects begin as a prototype or a minimum viable product built for speed, and then hit the limits of that shortcut. We take these projects to a professional footing without a rewrite from zero: we audit the current structure, agree the target architecture, and migrate in safe increments while the product keeps shipping. Typical moves:
+- From an MVP (prototype or minimum viable product) to a layered, tested, production-grade codebase.
+- From MVC or MVP to MVVM or MVI, with predictable state and testable screens.
+- From a monolith or a tightly coupled backend to clean or hexagonal architecture, with ports around the database and the third-party services.
+- From ad hoc data access to versioned schema migrations and typed API boundaries.
+- Adding dependency injection, automated tests and CI around code that already works, so it becomes safe to change.
+
+Each migration comes with the architecture documentation, so your team owns the result.
 
 ### Mobile
 Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with MVVM, `StateFlow`, Koin dependency injection, type-safe Navigation and Room for local data. Where a platform deserves it we go native: Swift and SwiftUI on iOS, Jetpack Compose on Android. Our showcase apps demonstrate the same patterns on each platform.
