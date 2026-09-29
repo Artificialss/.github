@@ -66,6 +66,15 @@ Many of our products depend on data that does not exist in a usable form, so we 
 ### Full-stack Rust
 Our newer products are Rust end to end. A Cargo workspace splits the project into crates that mirror the architecture: `domain`, `application` (use cases and ports), `adapters-db` (sqlx), `api` (axum, the composition root), `shared` (DTOs used by both sides) and `web` (Dioxus). The compiler enforces the dependency rules, the frontend and the API share one set of types, and the whole stack builds, lints and tests in a single CI pipeline.
 
+### R&D: cryptography, crypto integrations and post-quantum security
+Our research lab works on the cryptography that other products depend on, and we use Rust as the language to prototype and implement it.
+
+- **Post-quantum signatures.** Antiquantum protects its conservation land registry with hash-based signatures (LMS and XMSS), whose security rests on hash functions instead of the number-theoretic problems that quantum computers threaten. We research how to build them safely, including the hard part of stateful schemes: never reusing a one-time key, and keeping signing state consistent across restarts and failures. Hashing uses SHA-512.
+- **Physical entropy.** Randomness is the foundation of every key. We research entropy generation from biological sources, living hive colonies in the field, and how to condition, test and combine it with system randomness so a weak source can never weaken the result.
+- **Crypto integrations.** Token validation SDKs and on-chain verification for the Proof of Pollination registry (verification on chain is coming soon), plus market data for crypto assets through CryptoAlly, including API-key authentication where only hashes are stored.
+- **Why Rust.** Memory safety without a garbage collector, strong types for keys and signatures that cannot be mixed up, and `unsafe` code forbidden by default in our workspaces. Rust also compiles to WebAssembly, so the same verification logic can run in the API, in the browser and in mobile apps.
+- **How we work.** Standard, peer-reviewed primitives only; we do not invent our own algorithms. Test vectors from the specifications, property tests and constant-time considerations come first; independent review comes before anything protects real assets. This is research and engineering in progress, not an audited product.
+
 ### AI
 We use Claude across the stack, from engineering workflows to grounded, sourced answers in our own products. AI features are built with guardrails for off-topic and sensitive queries, and answers are anchored to verified sources rather than free-form generation.
 
