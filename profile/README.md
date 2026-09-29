@@ -26,11 +26,11 @@ We build for the people and places frontier technology usually skips.
 
 ### Showcase
 Open-source reference projects, one per platform:
-- **Rust:** [CryptoAlly-API](https://github.com/Artificialss/CryptoAlly-API), a production Rust API with clean architecture
-- **Web:** [Showcase.NextJS](https://github.com/Artificialss/Showcase.NextJS), Next.js and TypeScript
-- **Android:** [Showcase.Android](https://github.com/Artificialss/Showcase.Android), Kotlin and Jetpack Compose
-- **iOS:** [Showcase.iOS](https://github.com/Artificialss/Showcase.iOS), Swift and SwiftUI
-- **Multiplatform:** [Showcase.CMM](https://github.com/Artificialss/Showcase.CMM), Compose Multiplatform
+- **Rust:** [cryptoally-api](https://github.com/Artificialss/cryptoally-api), a production Rust API with clean architecture
+- **Web:** [showcase-nextjs](https://github.com/Artificialss/showcase-nextjs), Next.js and TypeScript
+- **Android:** [showcase-android](https://github.com/Artificialss/showcase-android), Kotlin and Jetpack Compose
+- **iOS:** [showcase-ios](https://github.com/Artificialss/showcase-ios), Swift and SwiftUI
+- **Multiplatform:** [showcase-cmm](https://github.com/Artificialss/showcase-cmm), Compose Multiplatform
 
 ## How we build
 
@@ -70,7 +70,21 @@ The principle underneath is the same in all of them: business rules do not depen
 Each migration comes with the architecture documentation, so your team owns the result.
 
 ### Mobile
-Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with MVVM, `StateFlow`, Koin dependency injection, type-safe Navigation and Room for local data. Where a platform deserves it we go native: Swift and SwiftUI on iOS, Jetpack Compose on Android. Our showcase apps demonstrate the same patterns on each platform.
+We build mobile apps the way each product needs them: native on each platform, or multiplatform from one codebase.
+
+- **Native Android.** Kotlin and Jetpack Compose with MVVM and clean architecture, coroutines and `StateFlow`, dependency injection (Koin, Dagger and Hilt), Room for local data, Retrofit, Ktor and GraphQL for networking, and Material Design 3. In-app purchases, subscriptions and ads, released to Google Play.
+- **Native iOS.** Swift and SwiftUI with MVVM and the modern Observable state pattern, Xcode tooling, and Objective-C and UIKit codebases maintained and modernized when a product depends on them. Released to the App Store.
+- **Multiplatform.** Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from one codebase, with shared business logic, type-safe navigation and Room. We also work with Flutter and Dart (BLoC) when a team already uses them.
+
+**Migration and upgrade service.** Mobile apps age quickly: platform requirements change, libraries are deprecated and old architectures slow every release. We modernize live apps in safe, incremental steps while they keep shipping, with unit tests around every change and no big-bang rewrite. Typical work:
+- **UI:** XML/View system to Jetpack Compose, and UIKit to SwiftUI, screen by screen.
+- **Language:** Java to Kotlin, and Objective-C to Swift.
+- **Architecture:** MVP (Model-View-Presenter) or MVC (Model-View-Controller) to MVVM (Model-View-ViewModel) with clean architecture, and Observables and callbacks to coroutines and `StateFlow`.
+- **Platform upgrades:** new Android and iOS releases and store requirements, such as Edge-to-Edge display on Android, plus SDK and dependency upgrades.
+- **Cross-platform moves:** legacy stacks such as Xamarin to native or Kotlin Multiplatform, and shared code extracted so Android and iOS stop duplicating logic.
+- **Foundations:** dependency injection, repository patterns, automated tests, CI and release automation added around code that already works.
+
+Our showcase apps demonstrate the same patterns on each platform.
 
 ### Frontend
 Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We also build **Dioxus** frontends in Rust that compile to **WebAssembly**, sharing typed request and response models with the API, on top of solid semantic HTML and CSS.
