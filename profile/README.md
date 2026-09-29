@@ -38,10 +38,16 @@ Kotlin Multiplatform and Compose Multiplatform give us Android, iOS and Web from
 Next.js (App Router) and TypeScript for marketing sites and dashboards, with server and client component boundaries kept explicit, theming and font optimization built in, and hand-built UI primitives instead of heavy dependency trees. Sites are SEO-ready (structured data, sitemaps, canonical URLs) and rate-limit their data-heavy pages. We are also building **Dioxus** frontends in Rust, sharing typed request and response models with the API.
 
 ### Backend
-Rust services with a hexagonal core: **axum** for HTTP, **sqlx** for compile-time-checked SQL, and typed errors from the domain out to the wire. Endpoints sit behind API-key authentication (only a hash of each key is stored), and clients, browsers and mobile apps never connect to a database directly. The API is the only gatekeeper.
+Rust services built in layers that depend inward only, as in our production CryptoAlly API:
+- `domain`: entities, newtypes (an asset id, a market slug, a plaintext API key and a stored key hash are all distinct types) and repository traits. It knows nothing about HTTP or Postgres.
+- `application`: thin services that orchestrate the ports.
+- `infrastructure`: the Postgres implementations, using **sqlx** with parameterized queries only, so SQL injection is ruled out by construction.
+- `http`: one **axum** `Router` that serves every route, with authentication as a single middleware layer instead of code repeated per handler, and errors mapped in one place.
+
+Security is designed in: API keys are random opaque tokens and only their SHA-256 hash is stored, so a key can be revoked instantly and a database leak exposes no usable key. The runtime database credential is read-only and separate from the one used by data ingestion, which runs out of band, and the API exposes no write endpoint at all. Clients, browsers and mobile apps never connect to a database directly. The API is the only gatekeeper. Because the domain is defined by traits, the whole HTTP layer (routing, auth, status codes and JSON shape) is tested end to end against in-memory fakes, with no database in the test process.
 
 ### Serverless
-Deployed on **Vercel** with the official Rust runtime and Fluid Compute, backed by **Neon** serverless Postgres (pooled connections for the application, direct connections for migrations). Preview deployments per pull request, environment variables managed through the platform, and no servers of our own to patch.
+Deployed on **Vercel** with the official Rust runtime (`vercel_runtime` with axum, one function serving the whole router) and Fluid Compute, backed by **Neon** serverless Postgres (pooled connections for the application, direct connections for migrations). Preview deployments per pull request, environment variables managed through the platform, and no servers of our own to patch.
 
 ### Deployment, analytics and auth
 - **Deployment:** Vercel for web and API. Every pull request gets a preview deployment, production ships from `main`, and configuration and secrets live in the platform's environment management. Rust services run on Vercel's Rust runtime; Next.js sites use the App Router on Fluid Compute.
@@ -71,7 +77,7 @@ Our research lab works on the cryptography that other products depend on, and we
 
 - **Post-quantum signatures.** Antiquantum protects its conservation land registry with hash-based signatures (LMS and XMSS), whose security rests on hash functions instead of the number-theoretic problems that quantum computers threaten. We research how to build them safely, including the hard part of stateful schemes: never reusing a one-time key, and keeping signing state consistent across restarts and failures. Hashing uses SHA-512.
 - **Physical entropy.** Randomness is the foundation of every key. We research entropy generation from biological sources, living hive colonies in the field, and how to condition, test and combine it with system randomness so a weak source can never weaken the result.
-- **Crypto integrations.** Token validation SDKs and on-chain verification for the Proof of Pollination registry (verification on chain is coming soon), plus market data for crypto assets through CryptoAlly, including API-key authentication where only hashes are stored.
+- **Crypto integrations.** Token validation SDKs and on-chain verification for the Proof of Pollination registry (verification on chain is coming soon), plus market data for crypto assets through CryptoAlly, including the hashed API-key scheme and distinct types for plaintext keys and stored hashes, so secrets cannot be mixed up by mistake.
 - **Why Rust.** Memory safety without a garbage collector, strong types for keys and signatures that cannot be mixed up, and `unsafe` code forbidden by default in our workspaces. Rust also compiles to WebAssembly, so the same verification logic can run in the API, in the browser and in mobile apps.
 - **How we work.** Standard, peer-reviewed primitives only; we do not invent our own algorithms. Test vectors from the specifications, property tests and constant-time considerations come first; independent review comes before anything protects real assets. This is research and engineering in progress, not an audited product.
 
