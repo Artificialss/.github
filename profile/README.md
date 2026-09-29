@@ -24,6 +24,14 @@ We build for the people and places frontier technology usually skips.
 - **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
 - **Education**: AI literacy, context engineering and production agentic workflows.
 
+### Showcase
+Open-source reference projects, one per platform:
+- **Rust:** [CryptoAlly-API](https://github.com/Artificialss/CryptoAlly-API), a production Rust API with clean architecture
+- **Web:** [Showcase.NextJS](https://github.com/Artificialss/Showcase.NextJS), Next.js and TypeScript
+- **Android:** [Showcase.Android](https://github.com/Artificialss/Showcase.Android), Kotlin and Jetpack Compose
+- **iOS:** [Showcase.iOS](https://github.com/Artificialss/Showcase.iOS), Swift and SwiftUI
+- **Multiplatform:** [Showcase.CMM](https://github.com/Artificialss/Showcase.CMM), Compose Multiplatform
+
 ## How we build
 
 We ship production software with AI-assisted engineering under a strict architecture spec, then hold the result to the same standard as any hand-written codebase: real patterns, live APIs, no placeholders and no shortcuts.
