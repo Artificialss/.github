@@ -1,20 +1,31 @@
 # Artificialss
 
-**Production-grade multiplatform software, built with AI-assisted engineering.**
+**Software & AI Ethical Labs**
 
-We design and ship real products end to end: Android, iOS, web and backend, from a single architecture spec. Real patterns, not slides.
+An applied AI research and product laboratory deploying frontier agentic AI with measurable social benefit, a transparent ecological footprint, and ethical constraints. Every initiative we ship is evaluated against three criteria: technical merit, measurable social benefit, and a transparent ecological footprint.
 
-## What we build
-- **[LeyReal.AI](https://artificialss.ai/)**: legal intelligence for Costa Rica. AI document analysis and a legal assistant grounded in the official legislation corpus.
-- **Pa'Pasar**: a study app helping Costa Rican students prepare for MEP national exams and UCR/UNA/TEC admission.
-- **[CryptoAlly](https://www.cryptoally.dev/)**: historical price and catalog data for crypto, stocks, ETFs and commodities.
-- **Antiquantum**: post-quantum cryptography powered by biological entropy from bee colonies, with revenue funding conservation land in Costa Rica.
+We build for the people and places frontier technology usually skips.
+
+## Portfolio
+
+### Products
+| Product | What it is | Status |
+|---|---|---|
+| [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Live |
+| Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Coming soon |
+| [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Alpha |
+| [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Live |
+| [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Live |
+
+### Services
+- **AI-powered software development**: design, prototyping, modernization and data engineering.
+- **Data engineering**: turning scattered, undocumented public sources into clean, structured, continuously verified datasets.
+- **Linguistic audit**: turnkey workflows to migrate organizational documentation to new style and compliance standards (APA, ISO, inclusive language). In development.
+- **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
+- **Education**: AI literacy, context engineering and production agentic workflows.
 
 ## How we build
-- Kotlin Multiplatform / Compose Multiplatform, Swift and SwiftUI, Jetpack Compose
-- Next.js and TypeScript
-- Rust (axum, Dioxus, sqlx) on Vercel and Neon Postgres
-- Clean / hexagonal architecture, MVVM, dependency injection, strict code review through pull requests
+Kotlin, Compose Multiplatform, Swift, Next.js, Rust, Python, Firebase, Supabase and Claude. Clean and hexagonal architecture, reviewed through pull requests.
 
 ## Contact
-[artificialss.ai](https://artificialss.ai/) · manager@artificialss.ai · United States of America
+[artificialss.ai](https://artificialss.ai/) · info@artificialss.ai · Turrialba, Costa Rica
