@@ -20,13 +20,23 @@ We build for the people and places frontier technology usually skips.
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
 - **Data engineering**: turning scattered, undocumented public sources into clean, structured, continuously verified datasets.
-- **Linguistic audit**: turnkey workflows to migrate organizational documentation to new style and compliance standards (APA, ISO, inclusive language). In development.
+- **Documentation audit and migration (linguistic audit)**: turnkey workflows that audit organizational documentation and migrate it to new style and compliance standards (APA, ISO, inclusive language), including institutional manuals and MCP integration. Available now.
 - **Legal advisory**: Costa Rican residency, real estate, labor law and corporate formation.
 - **Education**: AI literacy, context engineering and production agentic workflows.
 
 ## How we build
 
 We ship production software with AI-assisted engineering under a strict architecture spec, then hold the result to the same standard as any hand-written codebase: real patterns, live APIs, no placeholders and no shortcuts.
+
+**Spec first.** Every project starts with a written architecture spec: the layers, the dependency rules, the patterns (MVVM, dependency injection, ports and adapters), the data sources and the acceptance criteria. AI agents build inside that spec, so the design decisions are made by people up front instead of being improvised line by line.
+
+**Real, end to end.** Our showcase apps were built end to end with Claude Code under exactly this kind of spec: real navigation, real state management, real local storage and live APIs. If a feature is on screen, it works. We do not ship mocked data, stubbed screens or TODO placeholders as if they were finished.
+
+**Held to the hand-written standard.** Generated code goes through the same gates as any other: typed boundaries, formatting and linting, automated tests, security review, and a pull request that a person reads and approves. Speed comes from the tooling; accountability stays with the engineers.
+
+**Designed to be handed off.** Clients get source code, architecture documentation, dependency lists, usage guides and migrations, so a team can take over without us. Documentation is audited as carefully as code: style and compliance standards (APA, ISO, inclusive language) are applied and verified, and existing documentation can be migrated to them with our audit workflows.
+
+**Built to evolve.** Layers depend inward only, so databases, providers and UI frameworks can change without rewriting the business rules. Data ships with its methodology, coverage audits and known gaps documented, and schemas change only through versioned migrations.
 
 ### Architecture
 Clean and hexagonal architecture across every stack. Domain logic sits at the center with no I/O; use cases and ports define what the system needs; adapters (databases, HTTP, UI) plug in at the edges. Dependencies point inward only, so a database, a provider or a UI framework can change without touching the business rules.
