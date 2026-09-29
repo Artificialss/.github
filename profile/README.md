@@ -136,7 +136,14 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 
 **In-person and worldwide.** Our team works on site with clients anywhere in the world, for build sprints, workshops, architecture reviews and team onboarding. For international in-person engagements, we ask the client to cover the flights; other travel details are agreed in the proposal. Remote engagements need no travel.
 
-**Vibe Sessions.** Hands-on working sessions in three tracks: *Vibe Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Vibe UI Design* (Figma AI prototypes and design systems) and *Vibe Product Design* (architecture and platform strategy). Book privately for a 1:1 Vibe Sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
+**Agentic AI Quick Sessions.** Short, focused working sessions where you go from idea to a real deliverable with AI agents, guided live by our engineers. Three tracks: *Agentic Coding* (web, Android, iOS and Kotlin Multiplatform with Firebase or Supabase), *Agentic UI Design* (Figma AI prototypes and design systems) and *Agentic Product Design* (architecture and platform strategy). Book privately for a 1:1 sprint, from idea to deployed product in 4 hours, or as a group of up to 8. You receive a full session summary and your deliverable (source code, design files or a product spec) within 24 hours, under NDA.
+
+*Why this is a professional session, not casual prompting.* Anyone can ask an AI tool for code and hope it works. A quick session is different because it is run the way we run our own projects:
+- **Guided by professionals.** A senior engineer or designer leads the session. They frame the problem, choose the architecture, make the design decisions and know when the agent is wrong, so the result is not whatever the first prompt produced.
+- **Agents working inside a spec.** Before building, we write down the structure, the patterns and the acceptance criteria. Agents then work within that spec, which keeps the output consistent, reviewable and maintainable.
+- **Human in the loop at every step.** Each change is reviewed as it lands. You see how decisions are made and learn the workflow, not only the output.
+- **Production standards.** Typed boundaries, formatting and linting, tests where they matter, and real APIs instead of placeholders. The deliverable is something you can keep building on, not a throwaway demo.
+- **A clean handoff.** The session summary explains what was built and why, and the source, design files or product spec arrive within 24 hours, so your team can continue without us.
 
 **Legal advisory.** Direct introductions to independent, licensed Costa Rican attorneys, supported by AI-assisted guides, for residency, real estate, corporate formation, family and labor matters. Available in English and Spanish, for local and international clients. We connect you with counsel; we do not provide legal representation ourselves.
 - Legal info request: free, with a written response and no call required
