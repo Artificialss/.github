@@ -26,11 +26,11 @@ We build for the people and places frontier technology usually skips.
 
 ### Showcase
 Open-source reference projects, one per platform:
-- **Rust:** [CryptoAlly-API](https://github.com/Artificialss/CryptoAlly-API), a production Rust API with clean architecture
-- **Web:** [Showcase.NextJS](https://github.com/Artificialss/Showcase.NextJS), Next.js and TypeScript
-- **Android:** [Showcase.Android](https://github.com/Artificialss/Showcase.Android), Kotlin and Jetpack Compose
-- **iOS:** [Showcase.iOS](https://github.com/Artificialss/Showcase.iOS), Swift and SwiftUI
-- **Multiplatform:** [Showcase.CMM](https://github.com/Artificialss/Showcase.CMM), Compose Multiplatform
+- **Rust:** [cryptoally-api](https://github.com/Artificialss/cryptoally-api), a production Rust API with clean architecture
+- **Web:** [showcase-nextjs](https://github.com/Artificialss/showcase-nextjs), Next.js and TypeScript
+- **Android:** [showcase-android](https://github.com/Artificialss/showcase-android), Kotlin and Jetpack Compose
+- **iOS:** [showcase-ios](https://github.com/Artificialss/showcase-ios), Swift and SwiftUI
+- **Multiplatform:** [showcase-cmm](https://github.com/Artificialss/showcase-cmm), Compose Multiplatform
 
 ## How we build
 
