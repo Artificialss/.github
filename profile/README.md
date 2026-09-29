@@ -114,7 +114,7 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 - Full advisory hour: $40 for 1 hour
 - Contact: [legal@artificialss.ai](mailto:legal@artificialss.ai)
 
-**Academy.** Structured programs in Spanish (English on request) for educators and students, inclusive language, and professional and technical teams: context engineering, agentic coding and agentic workflow design. Two-hour workshops and a four-week intensive, in person in San Jose or online. Groups of 10 or more receive a discount and priority scheduling. Built for Costa Rica and Latin America. Contact: [academy@artificialss.ai](mailto:academy@artificialss.ai)
+**Academy.** Structured programs in Spanish (English on request) for educators and students, inclusive language, and professional and technical teams: context engineering, agentic coding and agentic workflow design. Two-hour workshops and a four-week intensive, in person in San Jose, online, or hosted at our lab in Costa Rica, where we receive students, educators and teams for hands-on learning. Groups of 10 or more receive a discount and priority scheduling. Built for Costa Rica and Latin America. Contact: [academy@artificialss.ai](mailto:academy@artificialss.ai)
 
 ## Contact
 
