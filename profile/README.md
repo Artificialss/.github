@@ -43,6 +43,11 @@ Rust services with a hexagonal core: **axum** for HTTP, **sqlx** for compile-tim
 ### Serverless
 Deployed on **Vercel** with the official Rust runtime and Fluid Compute, backed by **Neon** serverless Postgres (pooled connections for the application, direct connections for migrations). Preview deployments per pull request, environment variables managed through the platform, and no servers of our own to patch.
 
+### Deployment, analytics and auth
+- **Deployment:** Vercel for web and API. Every pull request gets a preview deployment, production ships from `main`, and configuration and secrets live in the platform's environment management. Rust services run on Vercel's Rust runtime; Next.js sites use the App Router on Fluid Compute.
+- **Analytics:** Firebase Analytics (GA4) and Vercel Web Analytics side by side. Page views are captured automatically, and a single tracking helper sends the same custom event name to both, so the two dashboards always agree. Sites that host data-heavy pages add per-IP rate limiting that does not block search crawlers.
+- **Auth and managed backend:** Supabase or Firebase, chosen per product. Supabase gives us Postgres with row-level security, auth and storage; Firebase gives us auth, analytics, messaging and app distribution on mobile. Where the API is the only gatekeeper to the data, as in our Rust services, we use API-key authentication instead and keep the database off the public internet.
+
 ### SQL and data modeling
 Postgres is the system of record. Schemas are versioned migrations, relationships use real foreign keys instead of fuzzy matching, and JSON Schema validates every record before it is loaded. Where Postgres fits better than a hosted BaaS we choose Neon; where a full backend platform helps (auth, storage) we use Supabase or Firebase.
 
