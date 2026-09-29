@@ -53,8 +53,8 @@ There is no single right architecture, so we work with the one that fits the cli
 The principle underneath is the same in all of them: business rules do not depend on frameworks. Domain logic sits at the center with no I/O, use cases and ports define what the system needs, and adapters (databases, providers, UI) plug in at the edges with dependencies pointing inward only. A database, a provider or a UI framework can then change without touching the business rules.
 
 **Architecture migrations.** Many projects begin as a prototype or a minimum viable product built for speed, and then hit the limits of that shortcut. We take these projects to a professional footing without a rewrite from zero: we audit the current structure, agree the target architecture, and migrate in safe increments while the product keeps shipping. Typical moves:
-- From an MVP (prototype or minimum viable product) to a layered, tested, production-grade codebase.
-- From MVC or MVP to MVVM or MVI, with predictable state and testable screens.
+- From an MVP (Minimum Viable Product), the first version built for speed, to a layered, tested, production-grade codebase.
+- From MVC (Model-View-Controller) or MVP (Model-View-Presenter) to MVVM (Model-View-ViewModel) or MVI (Model-View-Intent), with predictable state and testable screens.
 - From a monolith or a tightly coupled backend to clean or hexagonal architecture, with ports around the database and the third-party services.
 - From ad hoc data access to versioned schema migrations and typed API boundaries.
 - Adding dependency injection, automated tests and CI around code that already works, so it becomes safe to change.
@@ -124,7 +124,7 @@ We use Claude across the stack, from engineering workflows to grounded, sourced 
 
 ### Engagement models
 
-**Software development.** AI-powered software development, designed to be handed off: product design, prototyping, MVPs, modernization and data engineering. Full-stack across web, mobile and AI integration, with the same team and workflow for every client. Final rates are tailored to project scope and engagement length; contact us for a proposal.
+**Software development.** AI-powered software development, designed to be handed off: product design, prototyping, MVPs (Minimum Viable Products), modernization and data engineering. Full-stack across web, mobile and AI integration, with the same team and workflow for every client. Final rates are tailored to project scope and engagement length; contact us for a proposal.
 
 | | Costa Rica | International (U.S. priority) |
 |---|---|---|
