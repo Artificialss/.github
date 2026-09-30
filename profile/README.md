@@ -9,13 +9,13 @@ We build for the people and places frontier technology usually skips.
 ## Portfolio
 
 ### Products
-| Product | What it is | Status |
-|---|---|---|
-| [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Live |
-| Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Coming soon |
-| [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Live (alpha) |
-| [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Live (alpha) |
-| [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Live (alpha) |
+| Product | What it is | Stack | Status |
+|---|---|---|---|
+| [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Compose Multiplatform app (Android, iOS, Web), Next.js site, Firebase, Supabase, Vercel | Open Beta |
+| Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Compose Multiplatform apps (Android, iOS, Web); Rust (axum, sqlx), Dioxus and Neon platform in development | Coming soon |
+| [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Kotlin Multiplatform apps (Android, iOS); Rust and Dioxus web and API developer site, server-rendered for SEO; Rust API (axum, sqlx, Neon); Supabase; Firebase; Vercel | Live (alpha) |
+| [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Astro, Firebase, Supabase, cPanel hosting | Live (alpha) |
+| [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Astro, Firebase, Supabase | Coming soon |
 
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
@@ -102,7 +102,7 @@ Security is designed in: API keys are random opaque tokens and only their SHA-25
 Deployed on **Vercel** with the official Rust runtime (`vercel_runtime` with axum, one function serving the whole router) and Fluid Compute, backed by **Neon** serverless Postgres (pooled connections for the application, direct connections for migrations). Preview deployments per pull request, environment variables managed through the platform, and no servers of our own to patch.
 
 ### Deployment, analytics and auth
-- **Deployment:** Vercel for web and API. Every pull request gets a preview deployment, production ships from `main`, and configuration and secrets live in the platform's environment management. Rust services run on Vercel's Rust runtime; Next.js sites use the App Router on Fluid Compute.
+- **Deployment:** each product goes where it fits. **Vercel** hosts our Next.js sites, the Dioxus web apps and the Rust APIs, with a preview deployment per pull request and production shipped from `main`. **Cloudflare** (Pages and Workers) is where our static and Next.js sites are moving: we build in GitHub Actions and upload with Wrangler, so there are no per-minute build charges, and we add Turnstile, WAF rules and Access-protected previews. **cPanel hosting on Spaceship** still serves sites such as artificialss.ai and antiquantum.eco until they are migrated. Configuration and secrets live in each platform's encrypted environment variables, never in the repository.
 - **Analytics:** Firebase Analytics (GA4) and Vercel Web Analytics side by side. Page views are captured automatically, and a single tracking helper sends the same custom event name to both, so the two dashboards always agree. Sites that host data-heavy pages add per-IP rate limiting that does not block search crawlers.
 - **Auth and managed backend:** Supabase or Firebase, chosen per product. Supabase gives us Postgres with row-level security, auth and storage; Firebase gives us auth, analytics, messaging and app distribution on mobile. Where the API is the only gatekeeper to the data, as in our Rust services, we use API-key authentication instead and keep the database off the public internet.
 
