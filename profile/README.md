@@ -13,7 +13,7 @@ We build for the people and places frontier technology usually skips.
 |---|---|---|---|
 | [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Compose Multiplatform app (Android, iOS, Web), Next.js site, Firebase, Supabase, Vercel | Open Beta |
 | Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Compose Multiplatform apps (Android, iOS, Web); Rust (axum, sqlx), Dioxus and Neon platform in development | Coming soon |
-| [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Kotlin and Compose Multiplatform app, Rust API (axum, sqlx, Neon), Dioxus, Supabase, Firebase, Vercel | Live (alpha) |
+| [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Kotlin Multiplatform apps (Android, iOS); Rust and Dioxus web and API developer site, server-rendered for SEO; Rust API (axum, sqlx, Neon); Supabase; Firebase; Vercel | Live (alpha) |
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Astro, Firebase, Supabase, cPanel hosting | Live (alpha) |
 | [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Astro, Firebase, Supabase | Coming soon |
 
