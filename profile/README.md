@@ -11,7 +11,7 @@ We build for the people and places frontier technology usually skips.
 ### Products
 | Product | What it is | Status |
 |---|---|---|
-| [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Live |
+| [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Open Beta |
 | Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Coming soon |
 | [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Live (alpha) |
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Live (alpha) |
