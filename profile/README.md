@@ -15,7 +15,7 @@ We build for the people and places frontier technology usually skips.
 | Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Coming soon |
 | [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Live (alpha) |
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Live (alpha) |
-| [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Live (alpha) |
+| [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Coming soon |
 
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
