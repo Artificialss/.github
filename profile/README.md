@@ -17,6 +17,15 @@ We build for the people and places frontier technology usually skips.
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Astro, Firebase, Supabase, cPanel hosting | Live (alpha) |
 | [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Astro, Firebase, Supabase | Coming soon |
 
+### Libraries
+Reusable developer libraries that come out of our products, public and free to use.
+
+| Library | What it is | Get it | Status |
+|---|---|---|---|
+| [Lettras SDK](https://github.com/Artificialss/lettras-sdk) | Word-search generator for Spanish, English, Portuguese, French, German and Italian that keeps native letters (Ñ, Ç, Ã, Ä, ẞ) as one cell each. One compiled Rust engine (WebAssembly), the same results everywhere, running locally with no network or API key | **npm:** [`lettras`](https://www.npmjs.com/package/lettras) (JavaScript and TypeScript, plus a CLI) · **Maven Central:** [`org.lettras.artificialss:lettras`](https://central.sonatype.com/artifact/org.lettras.artificialss/lettras) (Kotlin for the JVM and Android) · **MCP:** `https://mcp.lettras.org/mcp` (listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=org.lettras/word-search) as `org.lettras/word-search`) | Live |
+
+The wrappers, the Rust MCP server (axum on Vercel) and the docs are MIT-licensed; the compiled engine is proprietary and may be used unmodified through these packages. The MCP server has a free tier of five puzzles per day. It powers the puzzle generator of [Lettras](https://lettras.org).
+
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
 - **Data engineering**: turning scattered, undocumented public sources into clean, structured, continuously verified datasets.
