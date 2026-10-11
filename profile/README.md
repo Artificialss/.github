@@ -12,7 +12,7 @@ We build for the people and places frontier technology usually skips.
 | Product | What it is | Stack | Status |
 |---|---|---|---|
 | [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Compose Multiplatform app (Android, iOS, Web), Next.js site, Firebase, Supabase, Vercel | Open Beta |
-| [Leyreal.com](https://www.leyreal.com/) | Free AI legal review and document scanning under Costa Rican law | Compose Multiplatform apps (Android, iOS, Web); Rust (axum, sqlx), Dioxus and Neon platform in development | Live |
+| [Leyreal.com](https://www.leyreal.com/) | Free AI legal review and document scanning under Costa Rican law | Compose Multiplatform apps (Android, iOS, Web); official LeyReal API ([leyreal.dev](https://leyreal.dev)) in Rust (axum, sqlx) on Vercel and Neon Postgres, in live beta | Live |
 | [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Kotlin Multiplatform apps (Android, iOS); Rust and Dioxus web and API developer site, server-rendered for SEO; Rust API (axum, sqlx, Neon); Supabase; Firebase; Vercel | Live (alpha) |
 | [Lettras.org](https://lettras.org) | Free word-search maker in Spanish, English, Portuguese, French, German and Italian with native letters (Ñ, Ç, ẞ) kept as one cell each, ready-made topics or your own words, printable PDF and image with the solution, and Unicode text styles. Free for teachers, also promoted in our Academy | Next.js 16, React 19, TypeScript, Tailwind, next-intl (6 languages); Rust engine compiled to WebAssembly, running in the browser; Supabase (dictionary and descriptions); Firebase Analytics behind a consent banner; Vercel | Live |
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Astro, Firebase, Supabase, cPanel hosting | Live (alpha) |
@@ -40,6 +40,7 @@ Open-source reference projects, one per platform:
 - **Web:** [showcase-nextjs](https://github.com/Artificialss/showcase-nextjs), Next.js and TypeScript
 - **Android:** [showcase-android](https://github.com/Artificialss/showcase-android), Kotlin and Jetpack Compose
 - **iOS:** [showcase-ios](https://github.com/Artificialss/showcase-ios), Swift and SwiftUI
+- **Rust API (LeyReal):** [leyreal-api](https://github.com/Artificialss/leyreal-api), the architecture of the LeyReal API on Vercel and Neon Postgres, with no database and no real data
 - **Multiplatform:** [showcase-cmm](https://github.com/Artificialss/showcase-cmm), Compose Multiplatform
 - **Flutter:** [showcase-flutter](https://github.com/Artificialss/showcase-flutter), Flutter and Dart with Clean Architecture, BLoC, GetIt and Freezed
 
