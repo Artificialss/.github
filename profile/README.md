@@ -14,6 +14,7 @@ We build for the people and places frontier technology usually skips.
 | [Papasar.cr](https://papasar.cr) | Free standardized-test and university-admission preparation for Costa Rican students (iOS, Android, Web) | Compose Multiplatform app (Android, iOS, Web), Next.js site, Firebase, Supabase, Vercel | Open Beta |
 | Leyreal.com | Free AI legal review and document scanning under Costa Rican law | Compose Multiplatform apps (Android, iOS, Web); Rust (axum, sqlx), Dioxus and Neon platform in development | Coming soon |
 | [CryptoAlly.dev](https://www.cryptoally.dev) | Live, free portfolio tracking for cryptocurrency and equities (Android, iOS, Web) | Kotlin Multiplatform apps (Android, iOS); Rust and Dioxus web and API developer site, server-rendered for SEO; Rust API (axum, sqlx, Neon); Supabase; Firebase; Vercel | Live (alpha) |
+| [Lettras.org](https://lettras.org) | Free word-search maker in Spanish, English, Portuguese, French, German and Italian with native letters (Ñ, Ç, ẞ) kept as one cell each, ready-made topics or your own words, printable PDF and image with the solution, and Unicode text styles. Free for teachers, also promoted in our Academy | Next.js 16, React 19, TypeScript, Tailwind, next-intl (6 languages); Rust engine compiled to WebAssembly, running in the browser; Supabase (dictionary and descriptions); Firebase Analytics behind a consent banner; Vercel | Live |
 | [Antiquantum.eco](https://antiquantum.eco) | Post-quantum cryptography and AI-powered field hardware for ecological data | Astro, Firebase, Supabase, cPanel hosting | Live (alpha) |
 | [Marca.eco](https://profiles.eco/marca) | Open registry for protected ecological land | Astro, Firebase, Supabase | Coming soon |
 
@@ -24,7 +25,7 @@ Reusable developer libraries that come out of our products, public and free to u
 |---|---|---|---|
 | [Lettras SDK](https://github.com/Artificialss/lettras-sdk) | Word-search generator for Spanish, English, Portuguese, French, German and Italian that keeps native letters (Ñ, Ç, Ã, Ä, ẞ) as one cell each. One compiled Rust engine (WebAssembly), the same results everywhere, running locally with no network or API key | **npm:** [`lettras`](https://www.npmjs.com/package/lettras) (JavaScript and TypeScript, plus a CLI) · **Maven Central:** [`org.lettras.artificialss:lettras`](https://central.sonatype.com/artifact/org.lettras.artificialss/lettras) (Kotlin for the JVM and Android) · **MCP:** `https://mcp.lettras.org/mcp` (listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=org.lettras/word-search) as `org.lettras/word-search`) | Live |
 
-The wrappers, the Rust MCP server (axum on Vercel) and the docs are MIT-licensed; the compiled engine is proprietary and may be used unmodified through these packages. The MCP server has a free tier of five puzzles per day. It powers the puzzle generator of [Lettras](https://lettras.org).
+The wrappers, the Rust MCP server (axum on Vercel) and the docs are MIT-licensed; the compiled engine is proprietary and may be used unmodified through these packages. Version 0.4.0 adds Unicode text styles (`stylize`, `unstyle`, `listStyles`) to the npm package and the Kotlin library, and `stylize_text` and `list_styles` to the MCP server. The MCP server is free for grids up to 10×10 with up to 10 words, styles have no limit, and bigger puzzles are a free trial of five per client. It powers the puzzle generator of [Lettras](https://lettras.org).
 
 ### Services
 - **AI-powered software development**: design, prototyping, modernization and data engineering.
@@ -40,6 +41,7 @@ Open-source reference projects, one per platform:
 - **Android:** [showcase-android](https://github.com/Artificialss/showcase-android), Kotlin and Jetpack Compose
 - **iOS:** [showcase-ios](https://github.com/Artificialss/showcase-ios), Swift and SwiftUI
 - **Multiplatform:** [showcase-cmm](https://github.com/Artificialss/showcase-cmm), Compose Multiplatform
+- **Flutter:** [showcase-flutter](https://github.com/Artificialss/showcase-flutter), Flutter and Dart with Clean Architecture, BLoC, GetIt and Freezed
 
 ## How we build
 
